@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>leave letter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+    <script src="leavelatterpro.js" defer></script>
+    <style>
+        #heading{
+            float: left;
+            width: 100%;
+            height: 15vh;
+            border: 2px solid blue;
+            overflow: auto;
+        }
+        #backgr{
+            float: left;
+            width: 100%;
+            height: 15vh;
+            border: 2px solid blue;
+            margin-top: 10px;
+        }
+        #head{
+            overflow: auto;
+            float: left;
+        }
+        button{
+            font-size: 30px;
+            float: right;
+        }
+        #bc{
+            float: right;
+        }
+        #bc1{
+            width: 80%;
+        }
+        #rea{
+            text-align: center;
+        }
+        #sm{
+            float: left;
+            width: 100%;
+            height: 15vh;
+            border: 2px solid blue;
+            margin-top: 10px;
+            overflow: auto;
+        }
+        #smrange,#smc{
+            float: right;
+            position: relative;
+            bottom: 5vh;
+        }
+        body{
+            background-image: url(leavelatterbackground.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 155vh;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="heading">
+        <h1 id="head">Heading</h1>
+        <input style="float: right;" min="10" max="100" value="20" type="range" id="range" onchange="heading1()">
+        <input id="hc" style="float: right;" type="color" oninput="heading()">
+    </div>
+    <div id="backgr">
+        <input type="color" id="bc" oninput="Background()">
+        <div id="bc1">
+        <h1 id="bh">Background</h1>
+        </div>
+    </div>
+    <div id="sm">
+       <p id="smp"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae alias a mollitia blanditiis distinctio officiis, corporis</p>
+       <input type="range" id="smrange" min="5" max="40" value="10" onchange="sample1()">
+       <input type="color" id="smc" oninput="sample()">
+    </div>
+    <table>
+        <tr>
+            <td><h2>From Name</h2></td>
+            <td><input  id="fn" type="text"  placeholder="From Name"></td>
+        </tr>
+        <tr>
+            <td><h2 >From Address</h2></td>
+            <td><input type="text" id="fa" placeholder="From Address"></td>
+        </tr>
+        <tr>
+            <td><h2 >Todays Date</h2></td>
+            <td><input type="date" id="date"></td>
+        </tr>
+        <tr>
+            <td><h2 >To Name</h2></td>
+            <td><input type="text" id="tn"  placeholder="To Name"></td>
+        </tr>
+        <tr>
+            <td><h2 >To Address</h2></td>
+            <td><input type="text" id="ta" placeholder="To Address"></td>
+        <tr>
+            <td><h2 >Sub</h2></td>
+            <td><select id="sg">
+                <option value="none">--select---</option>
+                <option value="Sir">Sir</option>
+                <option value="Madam">Madam</option>
+            </td>
+            <td><input type="text" placeholder="Subject" id="sub"></td>
+        </tr>
+        </tr>
+        <tr>
+            <td><h2>Reason</h2></td>
+            <td><textarea id="rea" cols="30" rows="10" placeholder="Reason for leave explain detailly"></textarea></td>
+        </tr>
+        <tr>
+            <td><h2 >From</h2></td>
+            <td><input type="date" id="fd"></td>
+            <td><h2 >To</h2></td>
+            <td><input type="date" id="td"></td>
+        </tr>
+        <tr>
+            <td><h2 >Number of days</h2></td>
+            <td><input type="number" placeholder="number of days" id="nds"></td>
+        </tr>
+    </table>
+    <form action="leavelatterproout.html">
+    <center>
+        <input type="submit" value="genarate letter" onclick="details()">
+    </center>
+    </form>
+</body>
+</html>
